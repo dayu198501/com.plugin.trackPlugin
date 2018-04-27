@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="com.plugin.trackPlugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>
+		Track
+	</name>
+	<js-module name="Track" src="www/Track.js">
+		<clobbers target="cordova.plugins.Track" />
+	</js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="Track">
+				<param name="android-package" value="com.plugin.trackPlugin.Track" />
+			</feature>
+		</config-file>
+		<source-file src="src/android/Track.java" target-dir="src/com/plugin/trackPlugin" />
+		<source-file src="src/android/GPSUtil.java" target-dir="src/com/plugin/trackPlugin" />
+		<!-- Android-AMap [jar]: -->
+		<source-file src="src/android/lib/AMap3DMap_5.4.0_AMapNavi_5.4.0_AMapSearch_5.3.1_AMapLocation_3.6.0_20170929.jar" target-dir="libs" />
+		<!-- Android-AMap native driver [native libs]: -->
+		<source-file src="src/android/lib/arm64-v8a/libGNaviData.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/libGNaviGuide.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/libGNaviMap.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/libGNaviMapex.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/libGNaviPos.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/libGNaviRoute.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/libGNaviSearch.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/libGNaviUtils.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/libRoadLineRebuildAPI.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/librtbt800.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/arm64-v8a/libwtbt800.so" target-dir="libs/arm64-v8a" />
+		<source-file src="src/android/lib/armeabi/libGNaviData.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libGNaviGuide.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libGNaviMap.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libGNaviMapex.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libGNaviPos.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libGNaviRoute.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libGNaviSearch.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libGNaviUtils.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libRoadLineRebuildAPI.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/librtbt800.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi/libwtbt800.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/lib/armeabi-v7a/libGNaviData.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/libGNaviGuide.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/libGNaviMap.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/libGNaviMapex.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/libGNaviPos.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/libGNaviRoute.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/libGNaviSearch.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/libGNaviUtils.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/libRoadLineRebuildAPI.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/librtbt800.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/armeabi-v7a/libwtbt800.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="src/android/lib/x86/libGNaviData.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/libGNaviGuide.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/libGNaviMap.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/libGNaviMapex.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/libGNaviPos.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/libGNaviRoute.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/libGNaviSearch.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/libGNaviUtils.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/libRoadLineRebuildAPI.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/librtbt800.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86/libwtbt800.so" target-dir="libs/x86" />
+		<source-file src="src/android/lib/x86_64/libGNaviData.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/libGNaviGuide.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/libGNaviMap.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/libGNaviMapex.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/libGNaviPos.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/libGNaviRoute.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/libGNaviSearch.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/libGNaviUtils.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/libRoadLineRebuildAPI.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/librtbt800.so" target-dir="libs/x86_64" />
+		<source-file src="src/android/lib/x86_64/libwtbt800.so" target-dir="libs/x86_64" />
+	</platform>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="Track">
+				<param name="ios-package" value="Track" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/Track.m" />
+	</platform>
+</plugin>
